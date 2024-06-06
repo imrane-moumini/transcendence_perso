@@ -12,6 +12,4 @@ admin.site.register(Friendship)
 admin.site.register(BlockedUser)
 
 
-
-
 # Register your models here.

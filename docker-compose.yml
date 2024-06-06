@@ -22,7 +22,7 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     volumes:
-      - ./backend/mysite:/app/volume
+      - ./backend/mysite:/code
     ports:
       - "8000:8000"
     depends_on:

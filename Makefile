@@ -1,4 +1,5 @@
 USERNAME :=$(shell whoami)
+VOLUME := $(sudo docker volume ls -q)
 
 all: 
 	sudo mkdir -p /Users/imranemoumini/Desktop/data/database
@@ -14,8 +15,10 @@ clean:
 	sudo docker container stop database
 	sudo docker container stop backend
 	sudo docker network rm transcendance
+	--docker volume rm $(VOLUME)
 
 fclean: clean
+
 	sudo rm -rf /Users/imranemoumini/Desktop/data/database/*
 	sudo rm -rf /Users/imranemoumini/Desktop/data/backend/*
 	sudo docker system prune -af
