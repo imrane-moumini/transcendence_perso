@@ -29,6 +29,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = "pong.User"
 
 # Application definition
 
@@ -92,6 +93,7 @@ DATABASES = {
 		'PORT': '5432'
 	}
 }
+
 
 
 # SECRET_KEY = os.getenv('SECRET_KEY', 'my-default-secret-key')
