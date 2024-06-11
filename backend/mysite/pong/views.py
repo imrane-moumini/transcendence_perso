@@ -2,7 +2,10 @@ from django.shortcuts import render
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect
-from .models import User, Tournament, Party, Chat, Message, Statistic, Participant, Friendship, BlockedUser
+from base64 import b64encode
+from django.core.files.base import ContentFile
+
+from .models import NewUser, Tournament, Party, Chat, Message, Statistic, Participant, Friendship, BlockedUser
 
  
 def index(request):
@@ -10,29 +13,30 @@ def index(request):
         return HttpResponseRedirect(reverse("login"))
     return render(request, "pong/homepage.html")
 
-def login(request):
+def login_view(request):
     return render(request,"pong/login.html")
 
 
 def signup(request):
     if request.method == "POST":
-        email = request.POST["email"]
-        password = request.POST["password"]
-        avatar = request.POST["avatar"]
-        pseudo = request.POST["pseudo"]
+        email = request.POST.get("email")
+        password = request.POST.get("password")
+        avatar = request.FILES.get("avatar")
+        pseudo = request.POST.get("pseudo")
 
-        if User.objects.filter(pseudo=pseudo).exists():
+        if NewUser.objects.filter(pseudo=pseudo).exists():
             return render(request, 'pong/signup.html', {
                 'error_message': "Username already exists. Please choose a different pseudo."
             })
 
         
-        if User.objects.filter(email=email).exists():
+        if NewUser.objects.filter(email=email).exists():
             return render(request, 'pong/signup.html', {
                 'error_message': "Email already exists. Please choose a different email."
             })
-        
-        user = User.objects.create_user(email=email, password=password, pseudo=pseudo, avatar=avatar)
+        binary_data = b64encode(avatar.read())
+
+        user = NewUser.objects.create_user(email=email, password=password, pseudo=pseudo, avatar=binary_data)
         user.save()
         return HttpResponseRedirect(reverse("index"))
     else:

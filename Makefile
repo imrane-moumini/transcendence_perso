@@ -23,6 +23,8 @@ fclean: clean
 
 	sudo rm -rf /Users/imranemoumini/Desktop/data/database/*
 	sudo rm -rf /Users/imranemoumini/Desktop/data/backend/*
+	sudo docker rm database
+	sudo docker rm backend
 	# sudo docker-compose down -v 
 	sudo docker system prune -af
 
