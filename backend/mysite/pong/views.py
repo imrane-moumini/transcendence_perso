@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse
 from django.http import HttpResponse, HttpResponseRedirect
@@ -17,7 +17,11 @@ def index(request):
     #return render(request, "pong/index.html")
 
 def login_view(request):
-    return render(request,"pong/login.html")
+    if not request.user.is_authenticated:
+        return render(request,"pong/login.html")
+    else:
+        #ça serait bien de rajouter une notification "vous êtes déjà connecté"
+        return HttpResponseRedirect(reverse("index"))
 
 
 def signup(request):
@@ -61,15 +65,22 @@ def signin(request):
             login(request, user)
             return HttpResponseRedirect(reverse("index"))
         else:
-            return render(request, "users/login.html", {
+            return render(request, "pong/login.html", {
                 "message": "Invalid credentials."
             })
     else:
         return render(request, "pong/signin.html")
-        
+
 def statistics(request):
     # return HttpResponseRedirect(reverse("pong:chat.html"))
     return render(request, "pong/statistics.html")
 
 def chat(request):
     return render(request, "pong/chat.html")
+
+def logout_view(request):
+    if request.user.is_authenticated:
+        logout(request)
+    return redirect('login')
+
+
