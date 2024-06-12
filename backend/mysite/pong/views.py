@@ -6,12 +6,15 @@ from base64 import b64encode
 from django.core.files.base import ContentFile
 
 from .models import NewUser, Tournament, Party, Chat, Message, Statistic, Participant, Friendship, BlockedUser
+from django.http import HttpResponse, HttpResponseRedirect
+
 
  
 def index(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse("login"))
     return render(request, "pong/homepage.html")
+    #return render(request, "pong/index.html")
 
 def login_view(request):
     return render(request,"pong/login.html")
@@ -63,4 +66,10 @@ def signin(request):
             })
     else:
         return render(request, "pong/signin.html")
+        
+def statistics(request):
+    # return HttpResponseRedirect(reverse("pong:chat.html"))
+    return render(request, "pong/statistics.html")
 
+def chat(request):
+    return render(request, "pong/chat.html")
