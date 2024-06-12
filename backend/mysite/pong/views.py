@@ -18,6 +18,9 @@ def login_view(request):
 
 
 def signup(request):
+    if request.user.is_authenticated:
+        #ça serait bien de rajouter une notification "vous êtes déjà connecté"
+        return HttpResponseRedirect(reverse("index"))
     if request.method == "POST":
         email = request.POST.get("email")
         password = request.POST.get("password")
@@ -42,12 +45,14 @@ def signup(request):
     else:
         return render(request, "pong/signup.html")
         
-""" 
+
 def signin(request):
-    pass
+    if request.user.is_authenticated:
+        #ça serait bien de rajouter une notification "vous êtes déjà connecté"
+        return HttpResponseRedirect(reverse("index"))
     if request.method == "POST":
-        email = request.POST["email"]
-        password = request.POST["password"]
+        email = request.POST.get("email")
+        password = request.POST.get("password")
         user = authenticate(request, email=email, password=password)
         if user is not None:
             login(request, user)
@@ -58,4 +63,4 @@ def signin(request):
             })
     else:
         return render(request, "pong/signin.html")
-"""
+
