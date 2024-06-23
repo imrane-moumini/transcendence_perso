@@ -4,7 +4,7 @@
 <form action="{% url 'profile' %}" method="post">
     {% csrf_token %}
     <fieldset>
-        <h1>right now you have chose to : </h1>
+        <h1> {{user_info.user_pseudo}} right now you have chose to : </h1>
         {% if user_info.user_choice %}
             <p>enable 2FA </p>
         {% else %}
@@ -26,4 +26,20 @@
     <img src="data:image/png;base64,{{ user_info.user_url|safe }}" alt="QR Code">
 {% endif %}    
 
+<div>
+    <a href="{% url 'add_friends' %}">add friends </a>
+</div>
+
+<div>
+    <h1>your friends are : </h1>
+    {% if user_info.user_friends %}
+        <ul>
+            {% for friend in user_info.user_friends %}
+                <li>{{ friend.pseudo }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>you have no friends yet.</p>
+    {% endif %}
+</div>
 {% endblock %}

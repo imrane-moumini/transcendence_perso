@@ -13,7 +13,8 @@ urlpatterns = [
     path("statistics/", views.statistics, name="statistics"),
     path("chat/", views.chat, name="chat"),
     path("otp/", views.otp_view, name="otp"),
-    path("profile", views.profile_view, name = "profile")
+    path("profile", views.profile_view, name = "profile"),
+    path("add_friends", views.add_friends, name ="add_friends")
     #path("account/", include("account.urls", namespace="account")),
     
 ]
