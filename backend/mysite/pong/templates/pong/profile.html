@@ -38,6 +38,7 @@
                 <li>{{ friend.pseudo }}</li>
             {% endfor %}
         </ul>
+        <a href="{% url 'delete_friends' %}">delete a friend </a>
     {% else %}
         <p>you have no friends yet.</p>
     {% endif %}

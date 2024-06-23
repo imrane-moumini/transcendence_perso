@@ -8,6 +8,7 @@ from .utils import get_friends
 from .models import NewUser, Tournament, Party, Chat, Message, Statistic, Participant, Friendship, BlockedUser
 from django.http import HttpResponse, HttpResponseRedirect
 from datetime import datetime
+from django.db.models import Q
 import pyotp
 import qrcode
 from io import BytesIO
@@ -195,6 +196,53 @@ def add_friends(request):
                                             })
     else:
         return render(request, "pong/add_friends.html", {
+                                                'error_message' : {
+                                                                        'value' : False,
+                                                                        'message' : "nothing"
+                                                                }
+                                            })
+
+
+
+
+def delete_friends(request):
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse("login"))
+    user = NewUser.objects.get(id=(request.session.get('user_id')))
+    if request.method == "POST":
+        friend_pseudo = request.POST.get("friend_pseudo")
+        friend_user = None
+        try:
+            friend_user = NewUser.objects.get(pseudo=friend_pseudo)
+        except NewUser.DoesNotExist:
+            friend_user = None
+    
+        if ( friend_user is not None) and (user.id is not friend_user.id) :
+            friendship = Friendship.objects.filter(Q(person1=user, person2=friend_user) | Q(person1=friend_user, person2=user)).first()
+            if friendship:
+                friendship.delete()
+            else:
+                message = "you are not friends"
+                return render(request, "pong/delete_friends.html", {
+                                                'error_message' : {
+                                                                        'value' : True,
+                                                                        'message' : message
+                                                                }
+                                                })       
+            return HttpResponseRedirect(reverse("profile")) #succes delete frfiend 
+        else:
+            if friend_user is None:
+                message = "this user doesn't exist"
+            else:
+                message = "you can't delete yourself as friend"
+            return render(request, "pong/delete_friends.html", {
+                                                'error_message' : {
+                                                                        'value' : True,
+                                                                        'message' : message
+                                                                }
+                                            })
+    else:
+        return render(request, "pong/delete_friends.html", {
                                                 'error_message' : {
                                                                         'value' : False,
                                                                         'message' : "nothing"
