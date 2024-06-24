@@ -143,8 +143,10 @@ def profile_view(request):
         else:
             user.is_mfa_enabled = False
             user.save()
-
-    user_avatar = user.avatar.url
+    try:
+        user_avatar = user.avatar.url
+    except ValueError:
+        user_avatar = None
 
     friends = get_friends(user)
 
