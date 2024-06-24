@@ -14,11 +14,13 @@ import qrcode
 from io import BytesIO
 import base64
  
+
+
 def index(request):
     if not request.user.is_authenticated:
         return HttpResponseRedirect(reverse("login"))
-    return render(request, "pong/homepage.html")
-    #return render(request, "pong/index.html")
+    return (render(request, "pong/homepage.html"))
+
 
 def login_view(request):
     if not request.user.is_authenticated:
@@ -27,7 +29,6 @@ def login_view(request):
         #ça serait bien de rajouter une notification "vous êtes déjà connecté"
         return HttpResponseRedirect(reverse("index"))
 
-
 def signup(request):
     if request.user.is_authenticated:
         #ça serait bien de rajouter une notification "vous êtes déjà connecté"
@@ -35,9 +36,15 @@ def signup(request):
     if request.method == "POST":
         email = request.POST.get("email")
         password = request.POST.get("password")
+        confirm_password = request.POST.get("confirm_password")
         avatar = request.FILES.get("avatar")
         pseudo = request.POST.get("pseudo")
 
+        if (confirm_password.casefold() != password.casefold()) :
+            return render(request, 'pong/signup.html', {
+                'error_message': "Password don't match, please try again."
+            })
+        
         if NewUser.objects.filter(pseudo=pseudo).exists():
             return render(request, 'pong/signup.html', {
                 'error_message': "Username already exists. Please choose a different pseudo."
@@ -52,6 +59,7 @@ def signup(request):
 
         user = NewUser.objects.create_user(email=email, password=password, pseudo=pseudo, avatar=binary_data)
         user.save()
+        print(user.id)
         return HttpResponseRedirect(reverse("index"))
     else:
         return render(request, "pong/signup.html")
@@ -76,7 +84,7 @@ def signin(request):
                 login(request, user)
                 return HttpResponseRedirect(reverse("index"))
         else:
-            return render(request, "pong/login.html", {
+            return render(request, "pong/signin.html", {
                 "message": "Invalid credentials."
             })
     else:
@@ -103,8 +111,11 @@ def otp_view(request):
                                             })
 
 def statistics(request):
-    # return HttpResponseRedirect(reverse("pong:chat.html"))
-    return render(request, "pong/statistics.html")
+    if not request.user.is_authenticated:
+        return HttpResponseRedirect(reverse("index"))
+    user = request.user
+    statistics = user.statistic
+    return render(request, "pong/statistics.html", {'user' : user, 'statistics' : statistics})
 
 def chat(request):
     return render(request, "pong/chat.html")
@@ -248,6 +259,9 @@ def delete_friends(request):
                                                                         'message' : "nothing"
                                                                 }
                                             })
+
+
+
 
 
 
