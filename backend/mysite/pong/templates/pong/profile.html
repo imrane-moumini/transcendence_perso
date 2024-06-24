@@ -21,6 +21,7 @@
     <input type="submit" value="Submit">
 </form>
 
+<img src="{{ user_info.user_avatar }}" alt="Avatar" />
 {% if user_info.user_choice %}
     <p>scan this QR code in your authentificator app to sync in, at your next connexion you will use your authentificator in order to login</p>
     <img src="data:image/png;base64,{{ user_info.user_url|safe }}" alt="QR Code">
