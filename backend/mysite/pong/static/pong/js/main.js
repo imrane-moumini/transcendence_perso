@@ -421,8 +421,8 @@ function loadContent(path) {
             console.log("data =", data);
             window.history.pushState({}, '', data.url);
             document.getElementById('app').innerHTML = data.html;
-            attachFormListeners();
-            attachLinkListeners();
+            //attachFormListeners();
+            //attachLinkListeners();
         } catch (error) {
             console.error('Error parsing JSON:', error);
             document.getElementById('app').innerHTML = text; // Display the HTML in the app div for debugging
@@ -431,6 +431,7 @@ function loadContent(path) {
     .catch(error => console.error('Error loading content:', error));
 }
 
+/*
 function attachFormListeners() {
     document.querySelectorAll('form').forEach(form => {
         form.addEventListener('submit', event => {
@@ -450,7 +451,7 @@ function attachLinkListeners() {
         });
     });
 }
-
+*/
 function submitForm(form) {
     const formData = new FormData(form);
     console.log("Submitting form:", form.action);
@@ -467,8 +468,8 @@ function submitForm(form) {
             console.log("Parsed response:", data);
             window.history.pushState({}, '', data.url);
             document.getElementById('app').innerHTML = data.html;
-            attachFormListeners();
-            attachLinkListeners();
+            //attachFormListeners();
+            //attachLinkListeners();
         } catch (error) {
             console.error('Error parsing JSON:', error);
             document.getElementById('app').innerHTML = text; // Display the HTML in the app div for debugging
