@@ -3,7 +3,8 @@ VOLUME := $(sudo docker volume ls -q)
 
 all: 
 	sudo docker pull python:3.12-slim
-	sudo docker pull postgres:13 
+	sudo docker pull postgres:13
+	sudo docker pull nginx:latest 
 	sudo mkdir -p /Users/imranemoumini/Desktop/data/database
 	sudo mkdir -p /Users/imranemoumini/Desktop/data/backend
 	sudo docker-compose -f docker-compose.yml build --no-cache;
@@ -16,6 +17,7 @@ logs:
 clean:
 	sudo docker container stop database
 	sudo docker container stop backend
+	sudo docker container stop nginx
 	sudo docker network rm transcendance
 	# sudo docker volume rm $(VOLUME)
 
