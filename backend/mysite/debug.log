@@ -1,137 +1,53 @@
-DEBUG 2024-07-09 17:14:16,220 views email avant parsing = titi@titi.com
-INFO 2024-07-09 17:14:16,221 views oui oui
-DEBUG 2024-07-09 17:14:16,233 views email apres parsing = titi@titi.com
-DEBUG 2024-07-09 17:14:16,234 views pseudo = 
-DEBUG 2024-07-09 17:14:16,234 views password = 
-DEBUG 2024-07-09 17:14:16,234 views confirm_password = 
-DEBUG 2024-07-09 17:15:18,139 views email avant parsing = popo@popo.fr
-INFO 2024-07-09 17:15:18,141 views oui oui
-INFO 2024-07-09 17:15:18,154 views non non
-INFO 2024-07-09 17:15:18,154 views non non
-INFO 2024-07-09 17:15:18,154 views non non
-INFO 2024-07-09 17:15:18,154 views non non
-INFO 2024-07-09 17:15:18,154 views non non
-INFO 2024-07-09 17:15:18,154 views non non
-INFO 2024-07-09 17:15:18,154 views non non
-INFO 2024-07-09 17:15:18,154 views non non
-INFO 2024-07-09 17:15:18,154 views non non
-INFO 2024-07-09 17:15:18,154 views non non
-INFO 2024-07-09 17:15:18,154 views non non
-INFO 2024-07-09 17:15:18,155 views non non
-DEBUG 2024-07-09 17:15:18,155 views email apres parsing = popo@popo.fr
-DEBUG 2024-07-09 17:15:18,155 views pseudo = 
-DEBUG 2024-07-09 17:15:18,158 views password = 
-DEBUG 2024-07-09 17:15:18,158 views confirm_password = 
-DEBUG 2024-07-09 17:16:03,509 views email avant parsing = mimi@mimi.com
-INFO 2024-07-09 17:16:03,511 views oui oui
-DEBUG 2024-07-09 17:16:03,524 views email apres parsing = mimi@mimi.com
-DEBUG 2024-07-09 17:16:03,524 views pseudo = 
-DEBUG 2024-07-09 17:16:03,524 views password = 
-DEBUG 2024-07-09 17:16:03,524 views confirm_password = 
-DEBUG 2024-07-09 17:18:23,667 views email avant parsing = tutu@tutu.com
-INFO 2024-07-09 17:18:23,670 views oui oui
-DEBUG 2024-07-09 17:18:23,670 views email_part = tutu
-DEBUG 2024-07-09 17:18:23,671 views domain_part = tutu.com
-DEBUG 2024-07-09 17:18:23,671 views email apres parsing = tutu@tutu.com
-DEBUG 2024-07-09 17:18:23,671 views pseudo = 
-DEBUG 2024-07-09 17:18:23,671 views password = 
-DEBUG 2024-07-09 17:18:23,671 views confirm_password = 
-DEBUG 2024-07-09 17:19:09,203 views email avant parsing = tountoun@tountoun.com
-INFO 2024-07-09 17:19:09,204 views oui oui
-DEBUG 2024-07-09 17:19:09,204 views email_part = tountoun
-DEBUG 2024-07-09 17:19:09,204 views domain_part = tountoun.com
-DEBUG 2024-07-09 17:19:09,204 views email apres parsing = tountoun@tountoun.com
-DEBUG 2024-07-09 17:19:09,204 views pseudo = 
-DEBUG 2024-07-09 17:19:09,204 views password = 
-DEBUG 2024-07-09 17:19:09,204 views confirm_password = 
-DEBUG 2024-07-09 17:23:21,796 views email avant parsing = nono@nono.com
-INFO 2024-07-09 17:23:21,797 views oui oui
-DEBUG 2024-07-09 17:23:21,798 views email_part = nono
-DEBUG 2024-07-09 17:23:21,798 views domain_part = nono.com
-DEBUG 2024-07-09 17:23:21,799 views email apres parsing = nono@nono.com
-DEBUG 2024-07-09 17:23:21,799 views pseudo = 
-DEBUG 2024-07-09 17:23:21,799 views password = 
-DEBUG 2024-07-09 17:23:21,799 views confirm_password = 
-DEBUG 2024-07-09 17:23:47,642 views email avant parsing = no#no@nono.com
-INFO 2024-07-09 17:23:47,642 views oui oui
-DEBUG 2024-07-09 17:23:47,642 views email_part = no#no
-DEBUG 2024-07-09 17:23:47,642 views domain_part = nono.com
-DEBUG 2024-07-09 17:23:47,643 views email apres parsing = 
-DEBUG 2024-07-09 17:23:47,643 views pseudo = 
-DEBUG 2024-07-09 17:23:47,643 views password = 
-DEBUG 2024-07-09 17:23:47,643 views confirm_password = 
-DEBUG 2024-07-09 17:24:16,078 views email avant parsing = nono##@nono.com
-INFO 2024-07-09 17:24:16,080 views oui oui
-DEBUG 2024-07-09 17:24:16,080 views email_part = nono##
-DEBUG 2024-07-09 17:24:16,080 views domain_part = nono.com
-INFO 2024-07-09 17:24:16,080 views Wrong char found !
-DEBUG 2024-07-09 17:24:16,080 views email apres parsing = 
-DEBUG 2024-07-09 17:24:16,080 views pseudo = 
-DEBUG 2024-07-09 17:24:16,080 views password = 
-DEBUG 2024-07-09 17:24:16,080 views confirm_password = 
-DEBUG 2024-07-09 21:44:37,928 views html in sigin =     
-    
-    <link href="/static/pong/css/signup.css" rel="stylesheet">
-    
-
-    <h1 class="text-center">Pong</h1>
-    <section class="login">
-        <form action="/signin" method="post">
-            <input type="hidden" name="csrfmiddlewaretoken" value="h0R4YVYYWBotA409FsX6wthlpZkfPOwcZoXRbOBhWfqJDxmBJDgZkwDna3SO5JQF">
-        
-            <label for="email">email</label>
-            <input type="text" name="email" placeholder="Email">
-        
-        
-            <label for="password">password</label>
-            <input type="password" name="password" placeholder="Password">
-        
-            <input type="submit" value="Log In">
-        </form>
-	    <p>New ?<br>Sign up <a href="/signup">here</a></p>
-
-    
-    </section>
-
-    
-
-
-DEBUG 2024-07-09 21:45:09,816 views html in sigin =     
-    
-    <link href="/static/pong/css/signup.css" rel="stylesheet">
-    
-
-    <h1 class="text-center">Pong</h1>
-    <section class="login">
-        <form action="/signin" method="post">
-            <input type="hidden" name="csrfmiddlewaretoken" value="AtzL2P3CTWyj3160CATDCk1bCFt7MS09iRFyfIGVTAAz6ussGLcwqnndnJ1G2NkC">
-        
-            <label for="email">email</label>
-            <input type="text" name="email" placeholder="Email">
-        
-        
-            <label for="password">password</label>
-            <input type="password" name="password" placeholder="Password">
-        
-            <input type="submit" value="Log In">
-        </form>
-	    <p>New ?<br>Sign up <a href="/signup">here</a></p>
-
-    
-    </section>
-
-    
-
-
-INFO 2024-07-09 22:02:53,591 views html at ajax
-DEBUG 2024-07-09 22:02:53,595 views html in signup = 
+INFO 2024-07-26 13:24:15,819 views On passe la ouai
+DEBUG 2024-07-26 13:24:15,826 views user = lulu
+DEBUG 2024-07-26 13:24:15,827 views statistics = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:24:15,828 views user stats = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:24:15,832 views data = {'history': [], 'user_statistic': <Statistic: Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+INFO 2024-07-26 13:24:18,268 views On passe la ouai
+DEBUG 2024-07-26 13:24:18,270 views user = lulu
+DEBUG 2024-07-26 13:24:18,272 views statistics = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:24:18,277 views user stats = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:24:18,284 views data = {'history': [], 'user_statistic': <Statistic: Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:26:02,305 views user participants = lulu
+DEBUG 2024-07-26 13:26:04,318 views user participants = lulu
+DEBUG 2024-07-26 13:27:25,785 views user participants = lulu
+DEBUG 2024-07-26 13:27:30,143 views user participants = lulu
+DEBUG 2024-07-26 13:27:30,146 views message_content = tkhj
+DEBUG 2024-07-26 13:27:30,148 views context = {'chat_info': {'list_of_chats': [<Chat: New_Chat>]}, 'message_info': '{"New_Chat": []}', 'chat_name': 'New_Chat', 'chat_name_json': '{"chat_name": "New_Chat"}', 'message_block': None, 'is_solo': False}
+DEBUG 2024-07-26 13:27:30,149 views chat_objet = New_Chat
+DEBUG 2024-07-26 13:27:40,877 views user = lulu
+INFO 2024-07-26 13:27:40,883 views Je passe la dans other profile
+DEBUG 2024-07-26 13:27:40,883 views username = lulu
+INFO 2024-07-26 13:27:40,883 views On passe la ouai
+DEBUG 2024-07-26 13:27:40,884 views user = lulu
+DEBUG 2024-07-26 13:27:40,885 views statistics = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:27:40,886 views user stats = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:27:40,896 views data = {'history': [], 'user_statistic': <Statistic: Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:27:40,896 views context = {'user_target': {'token': False}}
+DEBUG 2024-07-26 13:27:40,896 views context={'history': [], 'user_statistic': <Statistic: Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:27:40,896 views all Users = <QuerySet [<NewUser: admin>, <NewUser: lulu>]>
+DEBUG 2024-07-26 13:27:53,836 views user participants = lulu
+DEBUG 2024-07-26 13:28:07,158 views user participants = lulu
+DEBUG 2024-07-26 13:28:10,779 views user = lulu
+INFO 2024-07-26 13:28:10,779 views Je passe la dans other profile
+DEBUG 2024-07-26 13:28:10,780 views username = lulu
+INFO 2024-07-26 13:28:10,780 views On passe la ouai
+DEBUG 2024-07-26 13:28:10,781 views user = lulu
+DEBUG 2024-07-26 13:28:10,783 views statistics = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:28:10,786 views user stats = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:28:10,792 views data = {'history': [], 'user_statistic': <Statistic: Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:28:10,792 views context = {'user_target': {'token': False}}
+DEBUG 2024-07-26 13:28:10,793 views context={'history': [], 'user_statistic': <Statistic: Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:28:10,794 views all Users = <QuerySet [<NewUser: admin>, <NewUser: lulu>]>
+INFO 2024-07-26 13:28:34,668 views html at ajax
+DEBUG 2024-07-26 13:28:34,669 views html in signup = 
 	
 	<link href="/static/pong/css/signup.css" rel="stylesheet">
 	<h1 class="text-center">CREATE YOUR ACCOUNT</h1>
 
 	<section>
 		<form action="/signup" method="post"  type="file" enctype="multipart/form-data" name="avatar">
-			<input type="hidden" name="csrfmiddlewaretoken" value="j3FVdtCBxOJwjFqrZNHTGNDwrwvHEsUfHYAAfjl1h5XW6eHCVeFu4r0Khl5VtyIW">
+			<input type="hidden" name="csrfmiddlewaretoken" value="GPUHBBy22eKz2BLp0LRW8aRQhQqJhrGcen5OJ7skc1btG1P53ud7k0oGFbr5HQsg">
 		
 			<label for="email">email</label>
 			<input type="text" name="email" placeholder="Email">
@@ -153,36 +69,22 @@ DEBUG 2024-07-09 22:02:53,595 views html in signup =
 	
 		<p>Already registered ?<br>Log in <a href="/signin">here</a></p>
 	</section>
+	
 
 
 
 
 
-DEBUG 2024-07-09 22:03:07,168 views email avant parsing = testotp
-INFO 2024-07-09 22:03:07,170 views On passe ici exception
-DEBUG 2024-07-09 22:03:07,170 views email apres parsing = 
-DEBUG 2024-07-09 22:03:07,170 views pseudo = test
-DEBUG 2024-07-09 22:03:07,171 views password = test
-DEBUG 2024-07-09 22:03:07,171 views confirm_password = test
-DEBUG 2024-07-09 22:03:23,820 views email avant parsing = testotp
-INFO 2024-07-09 22:03:23,822 views On passe ici exception
-DEBUG 2024-07-09 22:03:23,823 views email apres parsing = 
-DEBUG 2024-07-09 22:03:23,823 views pseudo = testotp
-DEBUG 2024-07-09 22:03:23,824 views password = test
-DEBUG 2024-07-09 22:03:23,824 views confirm_password = test
-DEBUG 2024-07-09 22:03:41,854 views email avant parsing = test92
-INFO 2024-07-09 22:03:41,856 views On passe ici exception
-DEBUG 2024-07-09 22:03:41,856 views email apres parsing = 
-DEBUG 2024-07-09 22:03:41,856 views pseudo = test92
-DEBUG 2024-07-09 22:03:41,856 views password = test92
-DEBUG 2024-07-09 22:03:41,856 views confirm_password = test92
-DEBUG 2024-07-09 22:04:04,733 views email avant parsing = test92
-INFO 2024-07-09 22:04:04,735 views On passe ici exception
-DEBUG 2024-07-09 22:04:04,735 views email apres parsing = 
-DEBUG 2024-07-09 22:04:04,735 views pseudo = test92
-DEBUG 2024-07-09 22:04:04,736 views password = test92test
-DEBUG 2024-07-09 22:04:04,736 views confirm_password = test92test
-DEBUG 2024-07-09 22:04:09,553 views html in sigin =     
+DEBUG 2024-07-26 13:28:51,362 views email avant parsing = toto@toto.com
+INFO 2024-07-26 13:28:51,363 views oui oui
+DEBUG 2024-07-26 13:28:51,364 views email_part = toto
+DEBUG 2024-07-26 13:28:51,364 views domain_part = toto.com
+DEBUG 2024-07-26 13:28:51,365 views email apres parsing = toto@toto.com
+DEBUG 2024-07-26 13:28:51,365 views pseudo = toto
+DEBUG 2024-07-26 13:28:51,365 views password = toto
+DEBUG 2024-07-26 13:28:51,365 views confirm_password = toto
+INFO 2024-07-26 13:28:52,925 views __ A
+DEBUG 2024-07-26 13:28:52,926 views html in sigin =     
     
     <link href="/static/pong/css/signup.css" rel="stylesheet">
     
@@ -190,7 +92,7 @@ DEBUG 2024-07-09 22:04:09,553 views html in sigin =
     <h1 class="text-center">Pong</h1>
     <section class="login">
         <form action="/signin" method="post">
-            <input type="hidden" name="csrfmiddlewaretoken" value="AL1W3BFQ0jyelsywfQ2HEd4kDzzk9F5sYGWB5rogKAME81PHbh0i2Rryto9yYLT9">
+            <input type="hidden" name="csrfmiddlewaretoken" value="OkHTqjg4M058B5LdbiHPfzfI6geQLSu4mSS0yPamWNw2fvPTe130rpMyuBfcbhg8">
         
             <label for="email">email</label>
             <input type="text" name="email" placeholder="Email">
@@ -209,7 +111,134 @@ DEBUG 2024-07-09 22:04:09,553 views html in sigin =
     
 
 
-DEBUG 2024-07-09 22:05:27,625 views html in sigin =     
+INFO 2024-07-26 13:29:01,680 views __ A
+INFO 2024-07-26 13:29:01,681 views __ C
+INFO 2024-07-26 13:29:01,681 views __ D
+INFO 2024-07-26 13:29:02,556 views __ E
+DEBUG 2024-07-26 13:29:02,569 views email = toto@toto.com
+DEBUG 2024-07-26 13:29:02,569 views password = toto
+DEBUG 2024-07-26 13:29:03,951 views user participants = lulu
+INFO 2024-07-26 13:29:11,955 views on passe bien dans la boucle des chat
+INFO 2024-07-26 13:29:11,957 views On passe la aussi
+DEBUG 2024-07-26 13:29:11,957 views error_message : New_Chay doesn't exist. Please try again
+DEBUG 2024-07-26 13:29:11,957 views list_of_chats : [<Chat: New_Chat>]
+INFO 2024-07-26 13:29:18,376 views on passe bien dans la boucle des chat
+DEBUG 2024-07-26 13:29:18,382 views error_message : None
+DEBUG 2024-07-26 13:29:18,382 views list_of_chats : [<Chat: New_Chat>]
+DEBUG 2024-07-26 13:29:20,831 views user participants = lulu
+DEBUG 2024-07-26 13:29:20,835 views user participants = toto
+DEBUG 2024-07-26 13:29:24,177 views user participants = lulu
+DEBUG 2024-07-26 13:29:24,177 views user participants = toto
+DEBUG 2024-07-26 13:29:29,452 views user = toto
+INFO 2024-07-26 13:29:29,455 views Je passe la dans other profile
+DEBUG 2024-07-26 13:29:29,455 views username = lulu
+INFO 2024-07-26 13:29:29,455 views On passe la ouai
+DEBUG 2024-07-26 13:29:29,462 views user = toto
+DEBUG 2024-07-26 13:29:29,467 views statistics = Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:29:29,468 views user stats = Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:29:29,470 views data = {'history': [], 'user_statistic': <Statistic: Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:29:29,470 views context = {'user_target': {'token': False}}
+DEBUG 2024-07-26 13:29:29,470 views context={'history': [], 'user_statistic': <Statistic: Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:29:29,471 views all Users = <QuerySet [<NewUser: admin>, <NewUser: lulu>, <NewUser: toto>]>
+DEBUG 2024-07-26 13:29:29,472 views user_target avatar = 
+DEBUG 2024-07-26 13:29:29,477 views friends = <QuerySet []>
+DEBUG 2024-07-26 13:29:29,478 views user_target.statistic = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+INFO 2024-07-26 13:29:29,483 views On passe la ouai
+DEBUG 2024-07-26 13:29:29,484 views user = lulu
+DEBUG 2024-07-26 13:29:29,484 views statistics = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:29:29,485 views user stats = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:29:29,487 views data = {'history': [], 'user_statistic': <Statistic: Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:29:29,487 views data = {'history': [], 'user_statistic': <Statistic: Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:30:07,826 views user participants = toto
+DEBUG 2024-07-26 13:30:07,832 views user participants = lulu
+DEBUG 2024-07-26 13:30:09,726 views user participants = toto
+DEBUG 2024-07-26 13:30:09,726 views user participants = lulu
+DEBUG 2024-07-26 13:30:14,788 views user participants = toto
+DEBUG 2024-07-26 13:30:14,791 views user participants = lulu
+DEBUG 2024-07-26 13:30:16,613 views user participants = toto
+DEBUG 2024-07-26 13:30:16,613 views user participants = lulu
+DEBUG 2024-07-26 13:30:16,615 views message_content = gjngj
+DEBUG 2024-07-26 13:30:16,617 views context = {'chat_info': {'list_of_chats': [<Chat: New_Chat>]}, 'message_info': '{"New_Chat": [{"message": "tkhj", "sender": "lulu", "time": "2024-07-26T13:27:30.150802+00:00"}]}', 'chat_name': 'New_Chat', 'chat_name_json': '{"chat_name": "New_Chat"}', 'message_block': None, 'is_solo': False}
+DEBUG 2024-07-26 13:30:16,617 views chat_objet = New_Chat
+DEBUG 2024-07-26 13:30:21,821 views user = toto
+INFO 2024-07-26 13:30:21,822 views Je passe la dans other profile
+DEBUG 2024-07-26 13:30:21,822 views username = toto
+INFO 2024-07-26 13:30:21,822 views On passe la ouai
+DEBUG 2024-07-26 13:30:21,823 views user = toto
+DEBUG 2024-07-26 13:30:21,824 views statistics = Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:30:21,828 views user stats = Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:30:21,839 views data = {'history': [], 'user_statistic': <Statistic: Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:30:21,840 views context = {'user_target': {'token': False}}
+DEBUG 2024-07-26 13:30:21,840 views context={'history': [], 'user_statistic': <Statistic: Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:30:21,840 views all Users = <QuerySet [<NewUser: admin>, <NewUser: lulu>, <NewUser: toto>]>
+DEBUG 2024-07-26 13:30:24,373 views user participants = lulu
+DEBUG 2024-07-26 13:30:24,376 views user participants = toto
+DEBUG 2024-07-26 13:30:33,905 views user = lulu
+INFO 2024-07-26 13:30:33,907 views Je passe la dans other profile
+DEBUG 2024-07-26 13:30:33,908 views username = toto
+INFO 2024-07-26 13:30:33,908 views On passe la ouai
+DEBUG 2024-07-26 13:30:33,909 views user = lulu
+DEBUG 2024-07-26 13:30:33,912 views statistics = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:30:33,916 views user stats = Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:30:33,923 views data = {'history': [], 'user_statistic': <Statistic: Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:30:33,923 views context = {'user_target': {'token': False}}
+DEBUG 2024-07-26 13:30:33,923 views context={'history': [], 'user_statistic': <Statistic: Statistics for lulu - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:30:33,923 views all Users = <QuerySet [<NewUser: admin>, <NewUser: toto>, <NewUser: lulu>]>
+DEBUG 2024-07-26 13:30:33,925 views user_target avatar = 
+DEBUG 2024-07-26 13:30:33,926 views friends = <QuerySet []>
+DEBUG 2024-07-26 13:30:33,933 views user_target.statistic = Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+INFO 2024-07-26 13:30:33,934 views On passe la ouai
+DEBUG 2024-07-26 13:30:33,934 views user = toto
+DEBUG 2024-07-26 13:30:33,934 views statistics = Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:30:33,935 views user stats = Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00
+DEBUG 2024-07-26 13:30:33,940 views data = {'history': [], 'user_statistic': <Statistic: Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+DEBUG 2024-07-26 13:30:33,940 views data = {'history': [], 'user_statistic': <Statistic: Statistics for toto - won parties : 0 - lose parties : 0 - won tournament : 0 - total time played : 0:00:00>, 'game_dates_json': '[]', 'game_results_json': '[]', 'game_duration_json': '{}'}
+INFO 2024-07-26 13:47:26,061 views html at ajax
+DEBUG 2024-07-26 13:47:26,062 views html in signup = 
+	
+	<link href="/static/pong/css/signup.css" rel="stylesheet">
+	<h1 class="text-center">CREATE YOUR ACCOUNT</h1>
+
+	<section>
+		<form action="/signup" method="post"  type="file" enctype="multipart/form-data" name="avatar">
+			<input type="hidden" name="csrfmiddlewaretoken" value="lDH84nKKoyqQTDNAfF3eVDE4NSJpABOfdoEB2EUOLO4fylPblQ0QyXLrt3tLldGb">
+		
+			<label for="email">email</label>
+			<input type="text" name="email" placeholder="Email">
+
+			<label for="password">password</label>
+			<input type="password" name="password" placeholder="Password">
+
+			<label for="confirm_password">confirm password</label>
+			<input type="password" name="confirm_password" placeholder="Confirm_Password">
+
+			<label for="pseudo">pseudo</label>
+			<input type="text" name="pseudo" placeholder="Pseudo">
+
+			<label for="avatar" class="avatar">Select avatar</label>
+			<input id="avatar" style="visibility:hidden;" type="file" name="avatar">
+		
+			<input type="submit" value="SIGN UP">
+		</form>
+	
+		<p>Already registered ?<br>Log in <a href="/signin">here</a></p>
+	</section>
+	
+
+
+
+
+
+DEBUG 2024-07-26 13:47:42,135 views email avant parsing = lulu@lulu.com
+INFO 2024-07-26 13:47:42,137 views oui oui
+DEBUG 2024-07-26 13:47:42,137 views email_part = lulu
+DEBUG 2024-07-26 13:47:42,137 views domain_part = lulu.com
+DEBUG 2024-07-26 13:47:42,139 views email apres parsing = lulu@lulu.com
+DEBUG 2024-07-26 13:47:42,139 views pseudo = lulu
+DEBUG 2024-07-26 13:47:42,139 views password = lulu
+DEBUG 2024-07-26 13:47:42,139 views confirm_password = lulu
+INFO 2024-07-26 13:47:45,743 views __ A
+DEBUG 2024-07-26 13:47:45,746 views html in sigin =     
     
     <link href="/static/pong/css/signup.css" rel="stylesheet">
     
@@ -217,7 +246,7 @@ DEBUG 2024-07-09 22:05:27,625 views html in sigin =
     <h1 class="text-center">Pong</h1>
     <section class="login">
         <form action="/signin" method="post">
-            <input type="hidden" name="csrfmiddlewaretoken" value="e7JwhZh1qtrHG6GdbbZMozAK3T6E2QpF4M3e3GdB4QvO5Yv7cVYU84rEknpb0xXW">
+            <input type="hidden" name="csrfmiddlewaretoken" value="l5QcMzaxRbFzUedxSCVYO2LiXwAT23sndQNFKQkBerjYzWf8YNSArmSFDHkfNFkj">
         
             <label for="email">email</label>
             <input type="text" name="email" placeholder="Email">
@@ -236,7 +265,14 @@ DEBUG 2024-07-09 22:05:27,625 views html in sigin =
     
 
 
-DEBUG 2024-07-09 22:06:50,145 views html in sigin =     
+INFO 2024-07-26 13:47:53,741 views __ A
+INFO 2024-07-26 13:47:53,741 views __ C
+INFO 2024-07-26 13:47:53,741 views __ D
+INFO 2024-07-26 13:47:54,509 views __ E
+DEBUG 2024-07-26 13:47:54,524 views email = lulu@lulu.com
+DEBUG 2024-07-26 13:47:54,525 views password = lulu
+INFO 2024-07-26 13:48:05,040 views __ A
+DEBUG 2024-07-26 13:48:05,041 views html in sigin =     
     
     <link href="/static/pong/css/signup.css" rel="stylesheet">
     
@@ -244,7 +280,7 @@ DEBUG 2024-07-09 22:06:50,145 views html in sigin =
     <h1 class="text-center">Pong</h1>
     <section class="login">
         <form action="/signin" method="post">
-            <input type="hidden" name="csrfmiddlewaretoken" value="ylNsyBji5pbarxoF7LxGjn6vt7nSx0cADNjDb5oW5HShfnziqjhYu6sGOkMUg0h4">
+            <input type="hidden" name="csrfmiddlewaretoken" value="EEk2cn4wqpM7Szs9M07dbgo6qvGoMsisUBaIGZiZ7QmdKd8ZbMIJgJGFJRGiWxSg">
         
             <label for="email">email</label>
             <input type="text" name="email" placeholder="Email">
@@ -263,7 +299,14 @@ DEBUG 2024-07-09 22:06:50,145 views html in sigin =
     
 
 
-DEBUG 2024-07-09 22:19:10,709 views html in sigin =     
+INFO 2024-07-26 13:48:12,933 views __ A
+INFO 2024-07-26 13:48:12,933 views __ C
+INFO 2024-07-26 13:48:12,933 views __ D
+INFO 2024-07-26 13:48:13,708 views __ E
+DEBUG 2024-07-26 13:48:13,716 views email = lulu@lulu.com
+DEBUG 2024-07-26 13:48:13,716 views password = lulu
+INFO 2024-07-26 13:49:11,338 views __ A
+DEBUG 2024-07-26 13:49:11,339 views html in sigin =     
     
     <link href="/static/pong/css/signup.css" rel="stylesheet">
     
@@ -271,7 +314,7 @@ DEBUG 2024-07-09 22:19:10,709 views html in sigin =
     <h1 class="text-center">Pong</h1>
     <section class="login">
         <form action="/signin" method="post">
-            <input type="hidden" name="csrfmiddlewaretoken" value="b3VUNNnEQlDCHNz5zNZ4RGwUYJnXAbijgvr5qhsiQDkJvDKISlJm2pS5jWMZjbnN">
+            <input type="hidden" name="csrfmiddlewaretoken" value="iIAOFFWyAliIm8FIocZvUszVXZrB02ZDk6oTygRzEoJiXecSh5oWGM6tKzEQlDuj">
         
             <label for="email">email</label>
             <input type="text" name="email" placeholder="Email">
@@ -290,7 +333,15 @@ DEBUG 2024-07-09 22:19:10,709 views html in sigin =
     
 
 
-DEBUG 2024-07-09 22:19:31,739 views html in sigin =     
+INFO 2024-07-26 13:49:19,162 views __ A
+INFO 2024-07-26 13:49:19,164 views __ C
+INFO 2024-07-26 13:49:19,164 views __ D
+INFO 2024-07-26 13:49:20,026 views __ E
+DEBUG 2024-07-26 13:49:20,042 views email = lulu@lulu.com
+DEBUG 2024-07-26 13:49:20,042 views password = lulu
+INFO 2024-07-26 13:54:24,333 views __ A
+INFO 2024-07-26 13:54:26,070 views __ A
+DEBUG 2024-07-26 13:54:26,071 views html in sigin =     
     
     <link href="/static/pong/css/signup.css" rel="stylesheet">
     
@@ -298,7 +349,7 @@ DEBUG 2024-07-09 22:19:31,739 views html in sigin =
     <h1 class="text-center">Pong</h1>
     <section class="login">
         <form action="/signin" method="post">
-            <input type="hidden" name="csrfmiddlewaretoken" value="MOuR7cvmQVuySFby43BQbcFSXah5foBDRg02KGA0QdbFGvmbnBl8mV13inG7YoG7">
+            <input type="hidden" name="csrfmiddlewaretoken" value="Oiw28GZU67nB4ETQTPQ3Y51QDsoHKsCRhZLjHNnNtFzZX8jS0zMISb6nrxSp7nIq">
         
             <label for="email">email</label>
             <input type="text" name="email" placeholder="Email">
@@ -317,7 +368,8 @@ DEBUG 2024-07-09 22:19:31,739 views html in sigin =
     
 
 
-DEBUG 2024-07-09 22:19:44,598 views html in sigin =     
+INFO 2024-07-26 13:55:30,482 views __ A
+DEBUG 2024-07-26 13:55:30,483 views html in sigin =     
     
     <link href="/static/pong/css/signup.css" rel="stylesheet">
     
@@ -325,7 +377,7 @@ DEBUG 2024-07-09 22:19:44,598 views html in sigin =
     <h1 class="text-center">Pong</h1>
     <section class="login">
         <form action="/signin" method="post">
-            <input type="hidden" name="csrfmiddlewaretoken" value="TDXLCMrtgfwAYGAscR8gS7qQtgU1Q6cOY5tWfgw7gxdHMwL5vpSy3QM1Otj3z6hi">
+            <input type="hidden" name="csrfmiddlewaretoken" value="mPUqQ1yyWqyxP9pgd9ia0ogzWbntMJV1Pw9Hp8WrjYKVIDPikTePUul6KgRb9E1A">
         
             <label for="email">email</label>
             <input type="text" name="email" placeholder="Email">
@@ -344,3 +396,250 @@ DEBUG 2024-07-09 22:19:44,598 views html in sigin =
     
 
 
+INFO 2024-07-26 13:55:38,934 views __ A
+INFO 2024-07-26 13:55:38,935 views __ C
+INFO 2024-07-26 13:55:38,935 views __ D
+INFO 2024-07-26 13:55:39,674 views __ E
+DEBUG 2024-07-26 13:55:39,690 views email = lulu@lulu.com
+DEBUG 2024-07-26 13:55:39,690 views password = lulu
+INFO 2024-07-26 13:56:44,885 views __ A
+DEBUG 2024-07-26 13:56:44,885 views html in sigin =     
+    
+    <link href="/static/pong/css/signup.css" rel="stylesheet">
+    
+
+    <h1 class="text-center">Pong</h1>
+    <section class="login">
+        <form action="/signin" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="PlfLS6Zjc2w1YHiWp007eqS3FVYOMmG6wkuetf00Cb760kVQZcM8eUCuhWKb4Rac">
+        
+            <label for="email">email</label>
+            <input type="text" name="email" placeholder="Email">
+        
+        
+            <label for="password">password</label>
+            <input type="password" name="password" placeholder="Password">
+        
+            <input type="submit" value="Log In">
+        </form>
+	    <p>New ?<br>Sign up <a href="/signup">here</a></p>
+
+    
+    </section>
+
+    
+
+
+INFO 2024-07-26 13:56:54,869 views __ A
+INFO 2024-07-26 13:56:54,869 views __ C
+INFO 2024-07-26 13:56:54,870 views __ D
+INFO 2024-07-26 13:56:55,654 views __ E
+DEBUG 2024-07-26 13:56:55,669 views email = lulu@lulu.com
+DEBUG 2024-07-26 13:56:55,669 views password = lulu
+INFO 2024-07-26 13:57:56,373 views __ A
+DEBUG 2024-07-26 13:57:56,376 views html in sigin =     
+    
+    <link href="/static/pong/css/signup.css" rel="stylesheet">
+    
+
+    <h1 class="text-center">Pong</h1>
+    <section class="login">
+        <form action="/signin" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="SNf2A38ikVhFgRzF9Ox5L3ozikiJh5MQbdTGG0nWJ7E4t1NHAavNVHLbpLxNqPzW">
+        
+            <label for="email">email</label>
+            <input type="text" name="email" placeholder="Email">
+        
+        
+            <label for="password">password</label>
+            <input type="password" name="password" placeholder="Password">
+        
+            <input type="submit" value="Log In">
+        </form>
+	    <p>New ?<br>Sign up <a href="/signup">here</a></p>
+
+    
+    </section>
+
+    
+
+
+INFO 2024-07-26 13:58:10,810 views __ A
+INFO 2024-07-26 13:58:10,810 views __ C
+INFO 2024-07-26 13:58:10,810 views __ D
+INFO 2024-07-26 13:58:11,624 views __ E
+DEBUG 2024-07-26 13:58:11,640 views email = lulu@lulu.com
+DEBUG 2024-07-26 13:58:11,640 views password = lulu
+INFO 2024-07-26 15:14:23,163 views html at ajax
+DEBUG 2024-07-26 15:14:23,167 views html in signup = 
+	
+	<link href="/static/pong/css/signup.css" rel="stylesheet">
+	<h1 class="text-center">CREATE YOUR ACCOUNT</h1>
+
+	<section>
+		<form action="/signup" method="post"  type="file" enctype="multipart/form-data" name="avatar">
+			<input type="hidden" name="csrfmiddlewaretoken" value="uuNgGKnfQLSQM5VMmoUpBrTLd69Klr2XZAD4lIGywD5HwgcdJnO7qRlbrhBS59Fm">
+		
+			<label for="email">email</label>
+			<input type="text" name="email" placeholder="Email">
+
+			<label for="password">password</label>
+			<input type="password" name="password" placeholder="Password">
+
+			<label for="confirm_password">confirm password</label>
+			<input type="password" name="confirm_password" placeholder="Confirm_Password">
+
+			<label for="pseudo">pseudo</label>
+			<input type="text" name="pseudo" placeholder="Pseudo">
+
+			<label for="avatar" class="avatar">Select avatar</label>
+			<input id="avatar" style="visibility:hidden;" type="file" name="avatar">
+		
+			<input type="submit" value="SIGN UP">
+		</form>
+	
+		<p>Already registered ?<br>Log in <a href="/signin">here</a></p>
+	</section>
+	
+
+
+
+
+
+DEBUG 2024-07-26 15:14:40,538 views email avant parsing = test94@yahoo.fr
+INFO 2024-07-26 15:14:40,539 views oui oui
+DEBUG 2024-07-26 15:14:40,540 views email_part = test94
+DEBUG 2024-07-26 15:14:40,540 views domain_part = yahoo.fr
+DEBUG 2024-07-26 15:14:40,541 views email apres parsing = test94@yahoo.fr
+DEBUG 2024-07-26 15:14:40,541 views pseudo = test94
+DEBUG 2024-07-26 15:14:40,542 views password = test94
+DEBUG 2024-07-26 15:14:40,542 views confirm_password = test94
+INFO 2024-07-26 15:14:43,219 views __ A
+DEBUG 2024-07-26 15:14:43,222 views html in sigin =     
+    
+    <link href="/static/pong/css/signup.css" rel="stylesheet">
+    
+
+    <h1 class="text-center">Pong</h1>
+    <section class="login">
+        <form action="/signin" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="qNzLn6s2bANATTYsVOoFqz75P66v5PB5VTpz24LlRs0rD4fTiNinfZzv3hyDPxeu">
+        
+            <label for="email">email</label>
+            <input type="text" name="email" placeholder="Email">
+        
+        
+            <label for="password">password</label>
+            <input type="password" name="password" placeholder="Password">
+        
+            <input type="submit" value="Log In">
+        </form>
+	    <p>New ?<br>Sign up <a href="/signup">here</a></p>
+
+    
+    </section>
+
+    
+
+
+INFO 2024-07-26 15:14:48,329 views __ A
+INFO 2024-07-26 15:14:48,331 views __ C
+INFO 2024-07-26 15:14:48,331 views __ D
+INFO 2024-07-26 15:14:48,544 views __ F
+INFO 2024-07-26 15:14:48,544 views l'utilisateur est null
+DEBUG 2024-07-26 15:14:48,545 views email = test94@yahoo.fr
+DEBUG 2024-07-26 15:14:48,545 views password = test994
+INFO 2024-07-26 15:14:56,182 views __ A
+INFO 2024-07-26 15:14:56,183 views __ C
+INFO 2024-07-26 15:14:56,183 views __ D
+INFO 2024-07-26 15:14:56,381 views __ E
+DEBUG 2024-07-26 15:14:56,385 views email = test94@yahoo.fr
+DEBUG 2024-07-26 15:14:56,385 views password = test94
+INFO 2024-07-26 15:20:30,259 views __ A
+INFO 2024-07-26 15:20:32,968 views html at ajax
+DEBUG 2024-07-26 15:20:32,970 views html in signup = 
+	
+	<link href="/static/pong/css/signup.css" rel="stylesheet">
+	<h1 class="text-center">CREATE YOUR ACCOUNT</h1>
+
+	<section>
+		<form action="/signup" method="post"  type="file" enctype="multipart/form-data" name="avatar">
+			<input type="hidden" name="csrfmiddlewaretoken" value="407GohoNpa441VJniJtR0Ymd9T4XGIZINvOFj21KX5C6UM9PsLg4UizYcnJAuYNZ">
+		
+			<label for="email">email</label>
+			<input type="text" name="email" placeholder="Email">
+
+			<label for="password">password</label>
+			<input type="password" name="password" placeholder="Password">
+
+			<label for="confirm_password">confirm password</label>
+			<input type="password" name="confirm_password" placeholder="Confirm_Password">
+
+			<label for="pseudo">pseudo</label>
+			<input type="text" name="pseudo" placeholder="Pseudo">
+
+			<label for="avatar" class="avatar">Select avatar</label>
+			<input id="avatar" style="visibility:hidden;" type="file" name="avatar">
+		
+			<input type="submit" value="SIGN UP">
+		</form>
+	
+		<p>Already registered ?<br>Log in <a href="/signin">here</a></p>
+	</section>
+	
+
+
+
+
+
+DEBUG 2024-07-26 15:20:45,642 views email avant parsing = test@yahoo.com
+INFO 2024-07-26 15:20:45,644 views oui oui
+DEBUG 2024-07-26 15:20:45,644 views email_part = test
+DEBUG 2024-07-26 15:20:45,644 views domain_part = yahoo.com
+DEBUG 2024-07-26 15:20:45,645 views email apres parsing = test@yahoo.com
+DEBUG 2024-07-26 15:20:45,645 views pseudo = test
+DEBUG 2024-07-26 15:20:45,645 views password = test
+DEBUG 2024-07-26 15:20:45,645 views confirm_password = test
+INFO 2024-07-26 15:20:46,860 views __ A
+DEBUG 2024-07-26 15:20:46,862 views html in sigin =     
+    
+    <link href="/static/pong/css/signup.css" rel="stylesheet">
+    
+
+    <h1 class="text-center">Pong</h1>
+    <section class="login">
+        <form action="/signin" method="post">
+            <input type="hidden" name="csrfmiddlewaretoken" value="9OC3zBKVfG3vR6Xrk1Xn53Z2OPJ0rUNpSjj2umnSNBBxKXnTu3KAZncNRjoDfaBG">
+        
+            <label for="email">email</label>
+            <input type="text" name="email" placeholder="Email">
+        
+        
+            <label for="password">password</label>
+            <input type="password" name="password" placeholder="Password">
+        
+            <input type="submit" value="Log In">
+        </form>
+	    <p>New ?<br>Sign up <a href="/signup">here</a></p>
+
+    
+    </section>
+
+    
+
+
+INFO 2024-07-26 15:20:50,734 views __ A
+INFO 2024-07-26 15:20:50,735 views __ C
+INFO 2024-07-26 15:20:50,735 views __ D
+INFO 2024-07-26 15:20:50,943 views __ E
+DEBUG 2024-07-26 15:20:50,946 views email = test@yahoo.com
+DEBUG 2024-07-26 15:20:50,946 views password = test
+INFO 2024-07-26 19:34:23,052 views __ A
+INFO 2024-07-26 19:34:23,072 views __ B
+INFO 2024-07-26 20:50:17,209 views __ A
+INFO 2024-07-26 20:50:24,967 views __ A
+INFO 2024-07-26 20:50:24,969 views __ C
+INFO 2024-07-26 20:50:24,969 views __ D
+INFO 2024-07-26 20:50:25,238 views __ E
+DEBUG 2024-07-26 20:50:25,266 views email = test@yahoo.com
+DEBUG 2024-07-26 20:50:25,267 views password = test
